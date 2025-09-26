@@ -1,0 +1,27 @@
+# Node dependencies
+node_modules/
+
+# Build output (default for Eleventy is _site)
+_site/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment files
+.env
+.env.*.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Cache
+.cache/
