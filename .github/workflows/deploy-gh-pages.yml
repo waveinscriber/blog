@@ -32,9 +32,7 @@ jobs:
 
       - name: Build site
         # Adjust if your build script is different or output dir isn't _site
-        run: npx @11ty/eleventy
-        env:
-          PATH_PREFIX: "/blog/"
+        run: npx @11ty/eleventy --pathprefix=blog
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
