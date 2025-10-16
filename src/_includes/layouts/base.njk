@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% include "basehead.njk" %}
+    </head>
+    <body class="main-background">
+        <div class="navbar">
+            <div class="left">
+                <a href="/">Wave Inscriber</a>
+            </div>
+            <div class="right">
+                <a href="/blog">Blog</a>
+                <a href="/music">Music</a>
+            </div>
+        </div>
+
+        {{ content | safe }}
+    </body>
+</html>
