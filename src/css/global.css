@@ -8,11 +8,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-main {
-    height: 100%;
-    width: 100%;
-    /* display: flex; */
-}
 
 .navbar {
     background-color: #1b1e28;
@@ -20,6 +15,7 @@ main {
 
     display: flex;
     flex-direction: row;
+    position: sticky;
     /* justify-content: space-between; */
 
     a {
@@ -39,7 +35,7 @@ main {
         font-size: larger;
         font-weight: bold;
 
-        transition: 
+        transition:
             text-shadow ease-in-out .25s;
     }
 
@@ -69,4 +65,35 @@ main {
         background-color: antiquewhite;
         color: black;
     }
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+
+    color: beige;
+    flex-grow: 1;
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 850px;
+
+    /* background: linear-gradient(0deg, #363062 0%, #221b2f 100%); */
+    /* background: linear-gradient(180deg, #1c1029 0%, #2a1a3a 100%); */
+    /* background: linear-gradient(0deg, #1c1029 0%, #1f122d 100%); */
+    /* background: linear-gradient(180deg, #181a30 0%, #1f2140 100%); */
+    /* background: linear-gradient(145deg, #1c1d20 0%, #25262b 100%); */
+    /* background:
+        radial-gradient(circle at 20% 20%, rgba(120, 60, 255, 0.08), transparent 60%),
+        linear-gradient(180deg, #1a1322 0%, #20162e 100%); */
+
+    background-color: #161426;
+    border: solid rgb(13, 8, 26) 0.5px;
+    /* background: linear-gradient(0deg, #1d1525, #221b2f); */
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.4),
+        0 0 20px inset rgba(0, 0, 0, 0.3);
+    /* box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 20px rgba(255, 255, 255, 0.03); */
+
+    font-family: "Gowun Dodum", sans-serif;
 }
