@@ -1,0 +1,81 @@
+blockquote {
+    border-left: 4px solid #445566;
+    background-color: #1e2a36;
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    color: #cbd5e1;
+    font-style: italic;
+    border-radius: 0.25rem;
+}
+
+blockquote p {
+    margin: 0.5em 0;
+}
+
+blockquote.tip {
+    border-left-color: #3b82f6;
+    /* Blue */
+    background-color: #1e293b;
+    color: #dbeafe;
+}
+
+blockquote.tip::before {
+    content: "💡";
+    margin-right: 0.5rem;
+    font-style: normal;
+}
+
+blockquote.warning {
+    border-left-color: #f59e0b;
+    /* Amber */
+    background-color: #2e1f10;
+    color: #fef3c7;
+}
+
+blockquote.warning::before {
+    content: "⚠️";
+    margin-right: 0.5rem;
+    font-style: normal;
+}
+
+blockquote.thought {
+    border-left-color: #8b5cf6;
+    /* Purple */
+    background-color: #221b33;
+    color: #e9d5ff;
+}
+
+blockquote.thought::before {
+    content: "🧠";
+    margin-right: 0.5rem;
+    font-style: normal;
+}
+
+code {
+    background-color: #1f2d3a;
+    color: #e0e6ed;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    padding: 0.2em 0.4em;
+    border-radius: 4px;
+    font-size: 0.95em;
+
+    white-space: break-spaces;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+blockquote code {
+  background-color: rgba(255, 255, 255, 0.1); /* subtle transparent highlight */
+  color: #ffffff;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.95em;
+  white-space: break-spaces;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+pre, pre code {
+  padding-left: 0;
+  padding-right: 0;
+}

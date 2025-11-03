@@ -1,0 +1,22 @@
+.music-of-week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    h2 {
+        font-size: xx-large;
+        margin-bottom: 1rem;
+    }
+}
+
+.past-music-week {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+}

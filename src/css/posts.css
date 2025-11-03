@@ -1,0 +1,15 @@
+li {
+    margin-bottom: 2rem;
+
+    .post-list-title {
+        color: beige;
+        font-size: larger;
+    }
+
+
+    .post-list-date {
+        margin: 0.5rem 0 0 0;
+        font-style: italic;
+    }
+}
+
