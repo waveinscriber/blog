@@ -15,14 +15,14 @@ At first glance it looks like the program just prints the square of integers fro
 
 It was written by [Adrian Cable](https://www.linkedin.com/in/adrian-cable-91730221/) who became one of the winners of the 28th IOCCC (International Obfuscated C Code Contest) with this entry. When I first looked at the [source code in GitHub](https://github.com/ioccc-src/winner/blob/master/2024/cable2/prog.c) the only things suspicious to me were the pointer `salmon` and the macro `grill` that prints the values in the array. But the macro seems to be just defined and undefined immediately without any use. Where did the recipe text even come from then? Why can't I see the square of the numbers at all?
 
-The page for the entry on IOCCC's website has some hints to get to the solution and there's also a video giving a basic explanation, but I didn't know much about encodings or string literal prefixes so I still didn't know what was going on. It was my first time reading obfuscated code and this one looked interesting so I decided to dig deeper.
+The page for the entry on IOCCC's website has some hints to get to the solution and there's a video giving a basic explanation, but I didn't know much about encodings or string literal prefixes so I still didn't know what was going on. It was my first time reading obfuscated code and this one looked interesting enough that I decided to dig deeper.
 
 In this post I try to go through my thought process that led me to "solve" the program.
 
 Going into this I had some knowledge about the following topics so I assume you also have some understanding or at least can research them yourself:
 - Basic understanding of binary numbers, bytes and hexadecimal representation of bytes.
 - Basic programming and C syntax knowledge.
-- C macros, strings, pointers and traversing arrays with pointers.
+- C macros, strings, pointers, traversing arrays with pointers.
 
 Link to the IOCCC page of the entry - https://www.ioccc.org/2024/cable2/index.html
 
@@ -30,7 +30,7 @@ Link to the IOCCC page of the entry - https://www.ioccc.org/2024/cable2/index.ht
 
 
 
-## Dispelling the Illusion
+## Dispelling the illusion
 
 This kind of obfuscated code, beside sometimes being hard to read, contains some kind of trick to hide its real behavior. Probably the first thing to do when trying to understand such code is to discover that trick. I'll be quick to admit here that I didn't discover the trick by myself. As this was my first experience with obfuscated code, when I first looked at the code I was completely lost.
 
