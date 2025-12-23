@@ -1,3 +1,4 @@
+@import url('https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css');
 @import url("post-blockquote.css");
 
 .token.deleted {
@@ -21,6 +22,61 @@
 	display: block;
 }
 
+blockquote {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .post-date {
+    margin-top: 1rem;
     margin-bottom: 4rem;
+}
+
+.wrap pre code {
+  white-space: pre-wrap;
+  word-break: break-word;
+  text-wrap: wrap;
+}
+
+pre {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding: 12px 36px;
+    background-color: #272822;
+}
+
+pre[class*="language-"] {
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+pre code {
+    background-color: #272822;
+}
+
+code {
+    background-color: #345;
+}
+
+:not(pre) > code {
+    white-space: nowrap;
+}
+
+img {
+  max-width: var(--maxw, 100%);
+  margin-bottom: 3rem;
+}
+
+.center-img {
+  display: block;
+  margin: 1rem auto 3rem auto;
+}
+
+h2 {
+    margin-top: 5rem;
+}
+
+.content a,
+.content a:visited {
+    color: rgb(125, 145, 247);
 }
