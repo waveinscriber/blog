@@ -6,6 +6,7 @@ export default function (eleventyConfig) {
     eleventyConfig.addPlugin(HtmlBasePlugin);
 
     eleventyConfig.addPassthroughCopy("src/css/");
+    eleventyConfig.addPassthroughCopy("src/assets/");
 
     eleventyConfig.addWatchTarget("src/css/");
 
