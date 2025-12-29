@@ -90,10 +90,12 @@ I decided to focus on a single question at a time. Decoding the contents of the 
 
 I knew already by researching the `cat -v` command that the gibberish in the output is a special encoding to display non-printable characters in terms of printable ASCII characters. Below is a simple method for decoding the pattern. You'll need to refer to an ASCII table:
 
+```
 You start with a 0,
-`M-` means you need to add 128,
-`^` means you need to subtract 64,
-Add the following ASCII character's decimal value.
+'M-' means you need to add 128,
+'^' means you need to subtract 64,
+Add the decimal value of the ASCII character that follows.
+```
 
 For example, `M-^A` means `128 - 64 + 65 = 129 (81 in hex)`;
 `M- ` means `128 + 32 = 160 (A0 in hex)`
@@ -147,10 +149,10 @@ The type of the UTF32 encoded string is `const char32_t[]`. In the code, it is t
 
 According to the [reference page for putchar](https://en.cppreference.com/w/c/io/putchar.html), the function accepts an integer parameter and returns an integer. The character is converted to `unsigned char` internally. This means that for our `unsigned int` values, only the last 8 bits are actually used when deciding what character to print. So for every 32-bit UTF32 character value, you can discard the first 24 bits and find out what character is going to be printed looking at the remaining 8 bits. Also the returned integer value contains only the 8 bits that get printed, not the original value of the character.
 
-However, there is a slight problem. Programs use something called "code pages". They are similar to an ASCII table - they have a set of characters on them and they match each character with a unique number. The program printing characters then looks up the value in the code page to decide what character gets printed. The code page used differs from program to program. Sending a value of 278 may not print the same character on two different programs/systems.
+However, there is a slight problem. Programs use something called "code pages". They are similar to an ASCII table - they have a set of characters on them and they match each character with a unique number. The program printing characters then looks up the value in the code page to decide what character gets printed. The code page used differs from program to program. Sending a value of 178 may not print the same character on two different programs/systems.
 
 <blockquote class="tip">
-	If you have different shells installed, try passing in non-ASCII values into <code>putchar</code>. You'll probably get different results.
+	If you have different shells installed, try passing in non-ASCII bytes into <code>putchar</code>. You'll probably get different results.
 </blockquote>
 
 Luckily, the ASCII characters are standard and have the same values in most of the existing code pages. So if the value you pass in to `putchar` has 0 for the 8th bit (from the right side), you can be confident you'll get the same character across different programs.
